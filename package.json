@@ -1,0 +1,23 @@
+{
+  "name": "htt-pi",
+  "version": "0.1.0",
+  "description": "Local Pi RPC wrapper service for HTTP and WebSocket clients",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js && node --check src/config.js && node --check src/lib/jsonl-reader.js && node --check src/lib/pi-process.js && node --check src/lib/session.js && node --check src/lib/session-manager.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/websocket": "^11.2.0",
+    "dotenv": "^16.6.1",
+    "fastify": "^5.3.3",
+    "pino": "^9.7.0"
+  }
+}
